@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>針筒作業</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        position: relative;
+      }
+      #container {
+        width: 40%;
+        height: 15%;
+        margin: auto;
+        border: 1px solid #aaa;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(
+          180deg,
+          #fff 5%,
+          rgb(194, 189, 189) 50%,
+          #fff 95%
+        );
+      }
+      #container::before {
+        content: "";
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, transparent 95%, #aaa 95%);
+        background-size: 10% 5px;
+        background-repeat: repeat-x;
+        width: 50%;
+        position: absolute;
+        top: 0;
+      }
+      #container::after {
+        content: "";
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, transparent 95%, #aaa 95%);
+        background-size: 10% 5px;
+        background-repeat: repeat-x;
+        background-color: rgba(211, 211, 98, 0.5);
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+      }
+      #content {
+        position: absolute;
+        z-index: -1;
+        color: #aaa;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #content::before {
+        content: "";
+        display: block;
+        border: 1px solid #aaa;
+        border-right: none;
+        background: linear-gradient(
+          180deg,
+          #fff 5%,
+          rgb(194, 189, 189) 50%,
+          #fff 95%
+        );
+        height: 75%;
+        width: 15%;
+        position: absolute;
+        top: 10%;
+        left: -15.5%;
+      }
+
+      #content::after {
+        content: "";
+        display: block;
+        border: 1px solid #aaa;
+        border-left: none;
+        border-radius: 0.25rem;
+        background: linear-gradient(
+          180deg,
+          #fff 5%,
+          rgb(194, 189, 189) 50%,
+          #fff 95%
+        );
+        height: 75%;
+        width: 15%;
+        position: absolute;
+        top: 10%;
+        right: -15.5%;
+      }
+
+      #inner {
+        width: 5%;
+        height: 100%;
+        background: #000;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+      }
+      #inner::before {
+        content: "";
+        display: block;
+        border: 1px solid #aaa;
+        background: linear-gradient(
+          180deg,
+          #fff 5%,
+          rgb(194, 189, 189) 50%,
+          #fff 95%
+        );
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: -1300%;
+      }
+      #inner::after {
+        content: "";
+        display: block;
+        border: 0.1px solid #000;
+        height: 1px;
+        width: 300%;
+        position: absolute;
+        top: 45%;
+        right: -1570%;
+      }
+      #text {
+        color: #aaa;
+        position: absolute;
+        left: 0;
+        bottom: 0%;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="text">Make in Taiwan</div>
+      <div id="content"></div>
+      <div id="inner"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bear</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .face {
+        width: 500px;
+        height: 500px;
+        background: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .face::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background: #f00;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+      }
+      .face::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background: #f00;
+        border-radius: 50%;
+        top: 50%;
+        left: 95%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+      .noise {
+        width: 200px;
+        height: 150px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .noise::before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        background: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+      }
+      .noise::after {
+        content: "";
+        width: 125px;
+        height: 50px;
+        background: #000;
+        border-radius: 50%;
+        top: 65%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+      }
+      .left-eye {
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+      .left-eye::after {
+        content: "";
+        width: 75px;
+        height: 75px;
+        background: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 15;
+      }
+
+      .right-eye {
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 25%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        z-index: 14;
+      }
+
+      .right-eye::after {
+        content: "";
+        width: 75px;
+        height: 75px;
+        background: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 15;
+      }
+      .left-ear {
+        width: 75px;
+        height: 75px;
+        background: #000;
+        border-radius: 50%;
+        position: absolute;
+        left: 10%;
+      }
+      .left-ear::before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        left: 5%;
+        transform: translate(20%, 25%);
+      }
+      .right-ear {
+        width: 75px;
+        height: 75px;
+        background: #000;
+        border-radius: 50%;
+        position: absolute;
+        right: 10%;
+      }
+      .right-ear::before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        left: 5%;
+        transform: translate(20%, 25%);
+      }
+      .mouse {
+        width: 200px;
+        height: 100px;
+        background: #000;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .mouse::before {
+        content: "";
+
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%, -50%) skew(135deg, 0deg);
+      }
+      .mouse::after {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%) skew(45deg, 0deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="face">
+      <div class="left-eye"></div>
+      <div class="right-eye"></div>
+      <div class="left-ear"></div>
+      <div class="right-ear"></div>
+      <div class="noise"></div>
+      <div class="mouse"></div>
+    </div>
+  </body>
+</html>
